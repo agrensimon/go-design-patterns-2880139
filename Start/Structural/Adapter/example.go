@@ -15,6 +15,8 @@ func main() {
 		isOn:    true,
 	}
 
+	fmt.Println(tv1, tv2)
+
 	// TODO: Because the SohneeTV implements the "television" interface, we don't need an adapter
 
 	fmt.Println("--------------------")

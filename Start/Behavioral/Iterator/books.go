@@ -1,7 +1,5 @@
 package main
 
-import "fmt"
-
 // BookType represents the type of book
 type BookType int
 

@@ -12,7 +12,7 @@ func main() {
 	bldr.SetMessage("This is a basic notification")
 	bldr.SetType("alert")
 
-	notif, _ := bldr.Build()
+	notif, err := bldr.Build()
 	if err != nil {
 		fmt.Println("Error creating the notification:", err)
 	} else {

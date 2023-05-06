@@ -1,5 +1,7 @@
 package main
 
+import "fmt"
+
 func main() {
 	// Construct two DataListener observers and
 	// give each one a name
@@ -12,6 +14,8 @@ func main() {
 
 	// Create the DataSubject that the listeners will observe
 	subj := &DataSubject{}
+
+	fmt.Println(listener1, listener2, subj)
 	// TODO: Register each listener with the DataSubject
 
 	// TODO: Change the data in the DataSubject - this will cause the

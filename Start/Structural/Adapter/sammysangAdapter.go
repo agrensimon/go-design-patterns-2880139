@@ -14,18 +14,22 @@ func (ss *sammysangAdapter) turnOff() {
 
 func (ss *sammysangAdapter) volumeUp() int {
 	// TODO
+	return 0
 }
 
 func (ss *sammysangAdapter) volumeDown() int {
 	// TODO
+	return 0
 }
 
 func (ss *sammysangAdapter) channelUp() int {
 	// TODO
+	return 0
 }
 
 func (ss *sammysangAdapter) channelDown() int {
 	// TODO
+	return 0
 }
 
 func (ss *sammysangAdapter) goToChannel(ch int) {
