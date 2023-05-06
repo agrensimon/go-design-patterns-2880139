@@ -49,7 +49,7 @@ How objects are created during the lifetime of a program.
 
 Used to organize the various parts of a program into larger, more complex structures and to provide new functionality based on that organization.
 
-- Adapter
+- [Adapter](./Start/Structural/Adapter/README.md)
 - Bridge
 - Composite
 - Decorator
