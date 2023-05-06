@@ -1,7 +1,5 @@
 package main
 
-import "fmt"
-
 func main() {
 	// Construct two DataListener observers and
 	// give each one a name
@@ -15,12 +13,14 @@ func main() {
 	// Create the DataSubject that the listeners will observe
 	subj := &DataSubject{}
 
-	fmt.Println(listener1, listener2, subj)
-	// TODO: Register each listener with the DataSubject
+	// Register each listener with the DataSubject
+	subj.registerObserver(listener1)
+	subj.registerObserver(listener2)
 
-	// TODO: Change the data in the DataSubject - this will cause the
+	// Change the data in the DataSubject - this will cause the
 	// onUpdate method of each listener to be called
+	subj.ChangeItem("test")
 
-	// TODO: Try to unregister one of the observers
-
+	// Try to unregister one of the observers
+	subj.unregisterObserver(listener1)
 }

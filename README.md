@@ -67,6 +67,6 @@ Identify common patterns of communication and interaction between objects within
 - Iterator
 - Mediator
 - Memento
-- Observer
+- [Observer](./Start/Behavioral/Observer/README.md)
 - Strategy
 - Visitor
