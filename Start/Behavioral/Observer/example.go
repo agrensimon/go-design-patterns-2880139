@@ -19,8 +19,11 @@ func main() {
 
 	// Change the data in the DataSubject - this will cause the
 	// onUpdate method of each listener to be called
-	subj.ChangeItem("test")
+	subj.ChangeItem("Hello")
+	subj.unregisterObserver(listener1)
+	subj.ChangeItem("World")
 
 	// Try to unregister one of the observers
-	subj.unregisterObserver(listener1)
+	subj.unregisterObserver(listener2)
+	subj.ChangeItem("!")
 }
