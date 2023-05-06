@@ -3,10 +3,10 @@ package main
 func main() {
 	// Construct two DataListener observers and
 	// give each one a name
-	listener1 := DataListener{
+	listener1 := &DataListener{
 		Name: "Listener 1",
 	}
-	listener2 := DataListener{
+	listener2 := &DataListener{
 		Name: "Listener 2",
 	}
 

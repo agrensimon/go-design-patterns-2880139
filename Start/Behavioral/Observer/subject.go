@@ -1,16 +1,9 @@
 package main
 
-// Define the interface for the observable type
-// type observable interface {
-// 	registerObserver(obs observer)
-// 	unregisterObserver(obs observer)
-// 	notifyAll()
-// }
-
 // The DataSubject will have a list of listeners
 // and a field that gets changed, triggering them
 type DataSubject struct {
-	observers []DataListener
+	observers []observer
 	field     string
 }
 
@@ -21,15 +14,15 @@ func (ds *DataSubject) ChangeItem(data string) {
 }
 
 // This function adds an observer to the list
-func (ds *DataSubject) registerObserver(o DataListener) {
+func (ds *DataSubject) registerObserver(o observer) {
 	ds.observers = append(ds.observers, o)
 }
 
 // This function removes an observer from the list
-func (ds *DataSubject) unregisterObserver(o DataListener) {
-	var newObservers []DataListener
+func (ds *DataSubject) unregisterObserver(o observer) {
+	var newObservers []observer
 	for _, dl := range ds.observers {
-		if o.Name == dl.Name {
+		if o.name() == dl.name() {
 			continue
 		}
 		newObservers = append(newObservers, dl)
